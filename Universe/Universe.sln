@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Universe", "Universe\Universe.vcxproj", "{46443818-9DB8-48E7-9373-AE3D3802FB17}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Renderer", "Renderer\Renderer.vcxproj", "{A3419800-A018-42C2-8E13-C176416F08E3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Physics", "Physics\Physics.vcxproj", "{6C032DF6-2398-4A35-A9EA-B442416AEC3D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "TestApp\TestApp.vcxproj", "{BAC1CA1D-04D9-4A05-A193-87CACBB86F5D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3419800-A018-42C2-8E13-C176416F08E3} = {A3419800-A018-42C2-8E13-C176416F08E3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Networking", "Networking\Networking.vcxproj", "{C7A09987-3356-4646-89E0-3F643530BA15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46443818-9DB8-48E7-9373-AE3D3802FB17}.Debug|Win32.ActiveCfg = Debug|Win32
+		{46443818-9DB8-48E7-9373-AE3D3802FB17}.Debug|Win32.Build.0 = Debug|Win32
+		{46443818-9DB8-48E7-9373-AE3D3802FB17}.Release|Win32.ActiveCfg = Release|Win32
+		{46443818-9DB8-48E7-9373-AE3D3802FB17}.Release|Win32.Build.0 = Release|Win32
+		{A3419800-A018-42C2-8E13-C176416F08E3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A3419800-A018-42C2-8E13-C176416F08E3}.Debug|Win32.Build.0 = Debug|Win32
+		{A3419800-A018-42C2-8E13-C176416F08E3}.Release|Win32.ActiveCfg = Release|Win32
+		{A3419800-A018-42C2-8E13-C176416F08E3}.Release|Win32.Build.0 = Release|Win32
+		{6C032DF6-2398-4A35-A9EA-B442416AEC3D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6C032DF6-2398-4A35-A9EA-B442416AEC3D}.Debug|Win32.Build.0 = Debug|Win32
+		{6C032DF6-2398-4A35-A9EA-B442416AEC3D}.Release|Win32.ActiveCfg = Release|Win32
+		{6C032DF6-2398-4A35-A9EA-B442416AEC3D}.Release|Win32.Build.0 = Release|Win32
+		{BAC1CA1D-04D9-4A05-A193-87CACBB86F5D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BAC1CA1D-04D9-4A05-A193-87CACBB86F5D}.Debug|Win32.Build.0 = Debug|Win32
+		{BAC1CA1D-04D9-4A05-A193-87CACBB86F5D}.Release|Win32.ActiveCfg = Release|Win32
+		{BAC1CA1D-04D9-4A05-A193-87CACBB86F5D}.Release|Win32.Build.0 = Release|Win32
+		{C7A09987-3356-4646-89E0-3F643530BA15}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C7A09987-3356-4646-89E0-3F643530BA15}.Debug|Win32.Build.0 = Debug|Win32
+		{C7A09987-3356-4646-89E0-3F643530BA15}.Release|Win32.ActiveCfg = Release|Win32
+		{C7A09987-3356-4646-89E0-3F643530BA15}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

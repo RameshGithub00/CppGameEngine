@@ -1,0 +1,5 @@
+﻿  Renderer.cpp
+  shadermanager.cpp
+  glrenderer.cpp
+f:\projects\universe\renderer\opengl\glrenderer.cpp(6): warning C4101: 'monitor': unreferenced local variable
+  Renderer.vcxproj -> F:\Projects\Universe\Debug\renderer.lib
