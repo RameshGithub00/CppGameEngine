@@ -10,6 +10,10 @@ class Matrix
 	T buffer[row][column];
 	using Self = Matrix<row, column, T>;
 public:
+
+	static const u32 ROW = row;
+	static const u32 COLUMN = column;
+
 	Matrix()
 	{
 		memset(buffer, 0, row * column*sizeof(T));
@@ -60,13 +64,24 @@ public:
 	//multiplication
 	Self operator*(Self other) {
 
-		ecAssert(row == other.column);
+		ecAssert(ROW == other.COLUMN);
 
-		Self ret;
+		Matrix<ROW, other.COLUMN> ret;
 
-		for (u32 i = 0; i < row; ++i) {
-			for (u32 j = i; j < column; ++j) {
-				ret[i] = buffer[i][j] + other[i][j];
+		u32 myRow = ROW;
+		u32 otherColumn = other.COLUMN;
+
+		u32 myColAndOtherRow = COLUMN;//has to be same
+
+		T result = 0.0f;
+
+		for (u32 r1 = 0; r1 < myRow; ++r1) {
+			for (u32 c2 = 0; c2 < otherColumn; c2++) {
+				result = 0.0f;
+				for (u32 rc = 0; rc < myColAndOtherRow; ++rc) {
+					result += buffer[r1][rc] * other.buffer[rc][c2];
+				}
+				ret.buffer[r1][c2] = result;
 			}
 		}
 		return ret;

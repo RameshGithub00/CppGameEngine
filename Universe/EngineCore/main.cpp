@@ -7,5 +7,7 @@ int main()
 	mat44.SetTranslation(5, 4, 2);
 	Mat44 transposed = mat44.GetTranspose();
 
+	Mat44 mul = mat44*transposed;
+
 	return 0;
 }

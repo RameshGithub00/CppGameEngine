@@ -2,7 +2,7 @@
 
 #include <assert.h>
 
-#define ecAssert(x) _wassert(x,__FILE__,__LINE__);
+#define ecAssert(x) assert(x);
 
 namespace engcore
 {
