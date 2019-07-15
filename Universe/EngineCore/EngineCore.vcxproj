@@ -112,6 +112,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="core\ceAssert.h" />
+    <ClInclude Include="core\ceTypes.h" />
     <ClInclude Include="math\matrix.h">
       <FileType>CppCode</FileType>
     </ClInclude>

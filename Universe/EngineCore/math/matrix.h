@@ -1,10 +1,8 @@
 
 #include <memory.h>
+#include <core/ceAssert.h>
+#include <core/ceTypes.h>
 #include <math/util.h>
-typedef unsigned int		u32;
-typedef unsigned long int	u64;
-typedef float				f32;
-typedef double				f64;
 
 template<int row, int column, typename T=f32>
 class Matrix
@@ -37,15 +35,41 @@ public:
 	}
 
 	//add
+	Self operator + (Self& other) {
+		Self ret;
+		for (u32 i = 0; i < row; ++i) {
+			for (u32 j = i; j < column; ++j) {
+				ret[i] = buffer[i][j] + other[i][j];
+			}
+		}
+		return ret;
+	}
 
 	//sub
-
+	Self operator - (Self& other) {
+		Self ret;
+		for (u32 i = 0; i < row; ++i) {
+			for (u32 j = i; j < column; ++j) {
+				ret[i] = buffer[i][j] - other[i][j];
+			}
+		}
+		return ret;
+	}
 	//div
 
 	//multiplication
-	Self operator*(Self other) { 
-		//TODO
-		return Self(); 
+	Self operator*(Self other) {
+
+		ecAssert(row == other.column);
+
+		Self ret;
+
+		for (u32 i = 0; i < row; ++i) {
+			for (u32 j = i; j < column; ++j) {
+				ret[i] = buffer[i][j] + other[i][j];
+			}
+		}
+		return ret;
 	}
 
 	//transpose
