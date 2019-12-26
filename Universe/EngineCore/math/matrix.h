@@ -4,7 +4,7 @@
 #include <core/ceTypes.h>
 #include <math/util.h>
 
-namespace math
+namespace ce
 {
 	template<u32 ROW, u32 COLUMN, typename T>
 	class Matrix
@@ -130,7 +130,7 @@ namespace math
 	{
 		return 0.0f;
 	}
-}
+};
 
 //template<u32 row = 3, u32 column = 3, typename T>
 //f32 Matrix<3, 3, T>::Determinant()

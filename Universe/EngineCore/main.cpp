@@ -1,7 +1,7 @@
-#include <math/matrix.h>
-#include <math/vector.h>
 
-using namespace math;
+#include "precompiled.h"
+
+using namespace ce;
 
 int main()
 {
@@ -17,12 +17,15 @@ int main()
 
 	Mat44 mul = mat44*transposed;
 
-
 	Vec3 v1(1, 0, 0);
 	Vec3 v2(0, 1, 0);
 
 	Vec3 v1v2 = v1 + v2;
 
+	String str = v1v2.getDescription();
 
+	std::cout << str;
+
+	int n; std::cin >> n;
 	return 0;
 }

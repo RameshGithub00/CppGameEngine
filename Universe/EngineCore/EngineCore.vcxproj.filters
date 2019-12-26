@@ -6,6 +6,9 @@
     <ClInclude Include="math\util.h" />
     <ClInclude Include="core\ceAssert.h" />
     <ClInclude Include="core\ceTypes.h" />
+    <ClInclude Include="memory\ceMemory.h" />
+    <ClInclude Include="precompiled.h" />
+    <ClInclude Include="core\ceString.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

@@ -1,26 +1,7 @@
 #pragma once
-#include <core/ceTypes.h>
-namespace math
+#include "core/ceString.h"
+namespace ce
 {
-	
-	class Vec2
-	{
-		
-		f32 x, y;
-
-	public:
-		Vec2(f32 _x = 0, f32 _y = 0) :x(_x), y(_y) {}
-
-	
-		inline Vec2 operator+(Vec2& other)
-		{
-			Vec2 ret;
-			ret.x = x + other.x;
-			ret.y = y + other.y;
-			return ret;
-		}
-	};
-
 	class Vec3
 	{
 		f32 x;
@@ -28,16 +9,53 @@ namespace math
 		f32 z;
 
 	public:
-		Vec3(f32 _x = 0, f32 _y = 0, f32 _z = 0):x(_x),y(_y),z(_z) {}
 
-	
+		Vec3(f32 x, f32 y, f32 z) :x(x), y(y), z(z) 
+		{}
+
+		static Vec3 GetZero() { return Vec3(.0f, .0f, .0f); }
+
 		inline Vec3 operator+(Vec3& other)
 		{
-			Vec3 ret;
-			ret.x = x + other.x;
-			ret.y = y + other.y;
-			ret.z = z + other.z;
-			return ret;
+			return Vec3(x + other.x, y + other.y, z + other.z);
+		}
+
+		inline Vec3 operator-(Vec3& other)
+		{
+			return Vec3(x - other.x, y - other.y, z - other.z);
+		}
+
+		inline void Normalize()
+		{
+
+		}
+
+		inline Vec3 GetNormalized()
+		{
+			Vec3::GetZero();
+		}
+
+		inline static f32 GetCosine(Vec3& v1, Vec3& v2)
+		{
+
+			return 0.0f;
+		}
+
+		inline static f32 GetSine(Vec3& v1, Vec3& v2)
+		{
+			return 0.0f;
+		}
+
+		inline static f32 Dot(Vec3& v1, Vec3& v2)
+		{
+			return 0.0f;
+		}
+
+		inline String getDescription()
+		{
+			String ss;
+			return ss + x + " " + y + " " + z;
 		}
 	};
+
 }
